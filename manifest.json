@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Copiar seguro",
+    "version": "1.0",
+    "icons": {
+      "128": "icono.png"
+    },
+    "permissions": [
+      "contextMenus",
+      "activeTab",
+      "clipboardWrite",
+      "clipboardRead",
+      "scripting",
+      "notifications"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_icon": "icono.png",
+      "default_title": "Mi extensión",
+      "default_popup": "popup.html"
+    },
+    "key": "mphfjpnifiilmjplkppfgnpgaggpdjen"
+  }
+  
