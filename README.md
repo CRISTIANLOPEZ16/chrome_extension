@@ -1,5 +1,6 @@
 # chrome_extension
-This is a extension for keep safe your clipboard information
+This is a extension for keep safe your clipboard information.
+
 Esta extensión busca promover la seguridad a la hora de realizar transacciones por internet, enfocandose en las transacciones de Cryptoactivos las cuales se realizan a través de wallets alfanuméricas.
 Debido a su complejidad de lectura y escritura, la gente suele copiar y pegar sin enfocarse mucho en si la wallet está correcta o no.
 Aprovechandose de esto, los hackers han desarrollado virus capaces de modificar el portapapeles del dispositivo y robar así dinero a las personas ingenuas, esta extensión
