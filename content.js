@@ -3,7 +3,8 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if (request.action == "copiarContenido") {
     navigator.clipboard.writeText(request.text).then(function() {
       if (/^0x[a-fA-F0-9]{40}$/g.test(request.text)) {
-        alertDiv.textContent = "Se ha copiado una Wallet: " + selectedText;
+        const alertDiv = document.createElement('div');
+        alertDiv.textContent = "ℹ️ 🔒 Se ha copiado una Wallet: " + request.text;
         alertDiv.style.cssText = 'position: fixed; top: 10%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background-color: #4CAF50; color: white; font-size: 20px; font-weight: bold; text-align: center; border-radius: 10px; z-index: 9999;';
         document.body.appendChild(alertDiv);
         setTimeout(function() {
@@ -29,13 +30,15 @@ document.addEventListener('paste', function(event) {
   if (ethereumAddressRegex.test(pastedData)) {
     if(pastedData!=walletCopiada){
       const alertDiv = document.createElement('div');
-      alertDiv.textContent = "¡Cuidado! La dirección que acabas de pegar "+walletHacker +" no es la misma que copiaste: " + pastedData;
+      alertDiv.textContent = "⚠️¡Cuidado!⚠️ La dirección que acabas de pegar "+walletHacker +" no es la misma que copiaste: " + pastedData;
       alertDiv.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background-color: #f44336; color: white; font-size: 20px; font-weight: bold; text-align: center; border-radius: 10px; z-index: 9999;';
       document.body.appendChild(alertDiv);
       setTimeout(function() {
         alertDiv.remove();
-      }, 8000);
+        window.open(chrome.runtime.getURL('consejos.html'));
+        
 
+      }, 3000);
       // alert("¡Cuidado! La dirección que acabas de pegar no es la misma que copiaste " + walletHacker);
     }
   }
@@ -52,7 +55,7 @@ document.addEventListener('copy', function(event) {
   navigator.clipboard.writeText(selectedText).then(function() {
     if (/^0x[a-fA-F0-9]{40}$/g.test(selectedText)) {
       const alertDiv = document.createElement('div');
-      alertDiv.textContent = "Se ha copiado una Wallet: " + selectedText;
+      alertDiv.textContent = "ℹ️ 🔒 Se ha copiado una Wallet: " + selectedText;
       alertDiv.style.cssText = 'position: fixed; top: 10%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background-color: #4CAF50; color: white; font-size: 20px; font-weight: bold; text-align: center; border-radius: 10px; z-index: 9999;';
       document.body.appendChild(alertDiv);
       setTimeout(function() {
@@ -67,8 +70,4 @@ document.addEventListener('copy', function(event) {
   // Prevenir la acción por defecto de copiar
   event.preventDefault();
 });
-
-
-
-
 

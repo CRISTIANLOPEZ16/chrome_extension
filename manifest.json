@@ -27,6 +27,13 @@
         "default_icon": {
             "16": "icono.png"
         }
-     }
+     },
+     "web_accessible_resources": [
+        {
+          "resources": ["consejos.html"],
+          "matches": ["<all_urls>"]
+        }
+      ]
+      
   }
   
