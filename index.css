@@ -1,0 +1,36 @@
+body {
+  background-color: green;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 20px;
+}
+
+img {
+  width: 150;
+  height: 150px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+p {
+  font-size: 15px;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  background-color: rgb(114, 112, 112);
+  margin-top: 1%;
+}
+
+input[type="checkbox"]:checked {
+  background-color: rgb(185, 192, 192);
+}
+
+span {
+  font-size: 15px;
+}

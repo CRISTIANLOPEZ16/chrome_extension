@@ -11,7 +11,8 @@
       "clipboardWrite",
       "contextMenus",
       "tabs",
-      "notifications"
+      "notifications",
+      "storage"
     ],
     "background": {
       "service_worker": "background.js"
@@ -19,7 +20,7 @@
     "content_scripts": [
       {
         "matches": ["<all_urls>"],
-        "js": ["content.js"]
+        "js": ["content.js","options.js"]
       }
     ],
     "action": {

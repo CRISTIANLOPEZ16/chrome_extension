@@ -3,25 +3,25 @@
 <head>
   <title>SPF Security</title>
   <meta charset="UTF-8">
-  <style>
-    body {
-      background-color: green;
-      color: white;
-      font-family: sans-serif;
-      text-align: center;
-      padding: 20px;
-    }
-
-    img {
-      width: 200px;
-      height: 200px;
-      margin-bottom: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <img src="icono.png" alt="Mi logo">
-  <h1>Make Safe Transactions</h1>
-  <p>With SPF Pluggin u can be safe to send money.</p>
+  <h1>Realiza Transacciones Seguras</h1>
+  <!-- <p>Con SPF estas a salvo</p> -->
+  <h3>⚙️ Opciones</h3>
+  <input type="checkbox" id="copiarWalletCheckbox">
+  <span>Verificación de Wallets</span>
+  <br>
+  <input type="checkbox" id="httpsCheckbox">
+  <span>Verificación de HTTPS</span>
+  <br>
+  <input type="checkbox" id="phishingCheckbox">
+  <span>Validador de Phishing Bancario</span>
+  <br>
+  <br>
+
+  <button id="guardar">Guardar</button>
+  <script src="options.js"></script>
 </body>
 </html>
