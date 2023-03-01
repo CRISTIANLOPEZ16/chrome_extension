@@ -1,0 +1,16 @@
+.alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    text-align: center;
+    z-index: 9999;
+    font-weight: bold;
+  }
+  
+  .success {
+    background-color: #4CAF50;
+    color: white;
+  }
+  

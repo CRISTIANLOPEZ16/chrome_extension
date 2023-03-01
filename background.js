@@ -1,26 +1,24 @@
-chrome.runtime.onInstalled.addListener(function() {
-    chrome.contextMenus.create({
-      id: "copiarSeguro",
-      title: "Copiar seguro",
-      contexts: ["selection", "page"]
-    });
+chrome.contextMenus.create({
+    id: "copiarSeguro",
+    title: "Copiado seguro",
+    contexts: ["selection","page"]
   });
   
   chrome.contextMenus.onClicked.addListener(function(info, tab) {
     if (info.menuItemId === "copiarSeguro") {
       chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        chrome.tabs.sendMessage(tabs[0].id, {action: "getSelection"}, function(response) {
-          if (response && response.selection) {
-            const textToCopy = response.selection;
-            navigator.clipboard.writeText(textToCopy).then(function() {
-              console.log("¡Se ha copiado exitosamente!");
-            }, function() {
-                console.log("Ha ocurrido un error al intentar copiar el texto.");
-            });
-          } else {
-            console.log("No se ha seleccionado ningún texto en esta pestaña.");
-          }
-        });
+        var tab = tabs[0];
+        if (tab) {
+          chrome.tabs.sendMessage(tab.id, {action: "copiarContenido", text: info.selectionText}, function(response) {
+            if (chrome.runtime.lastError) {
+              console.error(chrome.runtime.lastError);
+            } else {
+              console.log(response);
+            }
+          });
+        } else {
+          console.error("No se pudo encontrar la pestaña activa.");
+        }
       });
     }
   });
