@@ -1,40 +1,40 @@
 {
     "manifest_version": 3,
-    "name": "Copiar seguro",
+    "name": "SPF Security",
+    "description" : "Make Safe Transactions",
     "version": "1.0",
     "icons": {
       "128": "icono.png"
     },
     "permissions": [
-      "contextMenus",
-      "activeTab",
-      "clipboardWrite",
       "clipboardRead",
-      "scripting",
-      "notifications"
+      "clipboardWrite",
+      "contextMenus",
+      "tabs",
+      "notifications",
+      "storage"
     ],
     "background": {
       "service_worker": "background.js"
     },
-    "action": {
-      "default_icon": "icono.png",
-      "default_title": "Mi extensión",
-      "default_popup": "popup.html"
-    }, "commands": {
-      "run-foo": {
-        "suggested_key": {
-          "default": "Ctrl+C",
-          "mac": "Command+C"
-        },
-        "description": "Run \"foo\" on the current page."
-      },
-      "_execute_action": {
-        "suggested_key": {
-          "windows": "Ctrl+C",
-          "mac": "Command+C"
-          }
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js","options.js"]
       }
-    },
-    "key": "mphfjpnifiilmjplkppfgnpgaggpdjen"
+    ],
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": {
+            "16": "icono.png"
+        }
+     },
+     "web_accessible_resources": [
+        {
+          "resources": ["consejos.html"],
+          "matches": ["<all_urls>"]
+        }
+      ]
+      
   }
   
