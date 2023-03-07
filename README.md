@@ -5,6 +5,8 @@
   - [Características](#características)
   - [Screenshots](#screenshots)
   - [Documentation](#documentation)
+    - [Casos de Uso](#casos-de-uso)
+    - [Fragmento de Código de la Extensión](#fragmento-de-código-de-la-extensión)
 - [Acknowledgements](#acknowledgements)
 
 # SPF Security
