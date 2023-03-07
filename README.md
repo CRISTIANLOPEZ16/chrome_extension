@@ -42,7 +42,7 @@ Para instalar la extensión siga los siguientes pasos:
 ![App Screenshot](https://i.ibb.co/jrZXw2D/image.png)
 ## Documentation
 
-[Documentation](https://linktodocumentation)
+[Documentation](https://drive.google.com/file/d/1IG8cu1wbHBkmznBzDqMilB5cRKIio0gc/view?usp=share_link)
 
 ### Casos de Uso
 
@@ -91,6 +91,13 @@ Content
 ```
 
 ## Acknowledgements
-- [MalwareBytes](https://es.malwarebytes.com/)
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - [MalwareBytes](https://es.malwarebytes.com/)
+ - [Chrome.runtime](https://developer.chrome.com/docs/extensions/reference/runtime/)
+ - [Chrome.tabs](https://developer.chrome.com/docs/extensions/reference/tabs/)
+ - [ContextMenu](https://developer.chrome.com/docs/extensions/reference/contextMenus/)
+ - [Clipboard](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API)
+ - [Navigation](https://developer.mozilla.org/en-US/docs/Web/API/Navigation_API)
+ - [Document](https://developer.mozilla.org/en-US/docs/Web/API/Document)
+ - [Window](https://developer.mozilla.org/en-US/docs/Web/API/Window)
  - [Awesome README](https://github.com/matiassingers/awesome-readme)
+ - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
