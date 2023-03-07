@@ -44,6 +44,20 @@ Para instalar la extensión siga los siguientes pasos:
 
 [Documentation](https://linktodocumentation)
 
+### Casos de Uso
+
+Acciones realizadas por el usuario con la extensión SPF_SECURITY.
+
+#### Caso de Uso General
+
+<a href="https://ibb.co/726CCdN"><img src="https://i.ibb.co/ChT883s/Whats-App-Image-2023-03-07-at-11-13-59-AM.jpg" alt="Whats-App-Image-2023-03-07-at-11-13-59-AM" border="0"></a>
+
+#### Caso de Uso Copiar URL
+
+<a href="https://ibb.co/mcwTpC6"><img src="https://i.ibb.co/VqZ96W2/Whats-App-Image-2023-03-07-at-11-45-46-AM.jpg" alt="Whats-App-Image-2023-03-07-at-11-45-46-AM" border="0"></a><br />
+
+### Fragmento de Código de la Extensión
+
 Fragmento de código con el cual se valida si se copia una wallet para asegurarla.
 
 Content
@@ -75,6 +89,7 @@ Content
       event.preventDefault();
     });
 ```
+
 ## Acknowledgements
 - [MalwareBytes](https://es.malwarebytes.com/)
  - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
